@@ -1,6 +1,4 @@
 # Count number of days in the given list
-from webbrowser import get
-
 
 weekdays = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sun', 'mon', 'mon']
 unique_days = set(weekdays)
