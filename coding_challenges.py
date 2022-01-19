@@ -82,13 +82,15 @@ t = table(5)
 
 # Check if a number is prime or not
 
-n = 18
-prime = True
-for i in range(2, n//2+1):
-    if n % i == 0:
-        prime = False
+def check_prime(n):
+    if n<=1:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n%i==0:
+            return False
+    return True
 
-# if prime:
+# if check_prime(18):
 #     print("It is a prime number")
 # else:
 #     print("It is not a prime number")
