@@ -1,10 +1,8 @@
 # Count number of days in the given list
 
-weekdays = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sun', 'mon', 'mon']
+weekdays = ["sun", "mon", "tue", "wed", "thu", "fri", "sun", "mon", "mon"]
 unique_days = set(weekdays)
-d = {
-    day: weekdays.count(day) for day in unique_days
-}
+d = {day: weekdays.count(day) for day in unique_days}
 # print(d)
 
 ################################################
@@ -25,7 +23,7 @@ func_global()
 
 # Multiplying list
 l = [1, 2, 3]
-l2 = map(lambda x: x*2, l)
+l2 = map(lambda x: x * 2, l)
 # for num in l2:
 #     print(num)
 
@@ -39,7 +37,7 @@ l = [1, 2, 3, 4, 5, 6, 20]
 
 # Reverse a number in python
 num = 1234.8231
-num_rev = [n[::-1] for n in str(num).split('.')]
+num_rev = [n[::-1] for n in str(num).split(".")]
 # print('.'.join(num_rev))
 
 ################################################
@@ -70,7 +68,7 @@ rev = 0
 
 def table(n):
     for i in range(1, 11):
-        yield f'{n} * {i} = {n*i}'
+        yield f"{n} * {i} = {n*i}"
 
 
 t = table(5)
@@ -82,13 +80,15 @@ t = table(5)
 
 # Check if a number is prime or not
 
+
 def check_prime(n):
-    if n<=1:
+    if n <= 1:
         return False
-    for i in range(2, int(n**0.5)+1):
-        if n%i==0:
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
             return False
     return True
+
 
 # if check_prime(18):
 #     print("It is a prime number")
@@ -100,7 +100,7 @@ def check_prime(n):
 # Armstrong number
 num = 370
 digits = [int(n) for n in str(num)]
-cubes = map(lambda x: x*x*x, digits)
+cubes = map(lambda x: x * x * x, digits)
 # if sum(cubes) == num:
 #     print('Armstrong number')
 
@@ -108,9 +108,10 @@ cubes = map(lambda x: x*x*x, digits)
 
 # Perfect number
 def get_divisors(n):
-    for i in range(1,n):
-        if n%i==0:
+    for i in range(1, n):
+        if n % i == 0:
             yield i
+
 
 n = 6
 divisors = get_divisors(n)
@@ -121,10 +122,11 @@ divisors = get_divisors(n)
 
 # Strong number
 def get_factorial(n):
-    if n==1:
+    if n == 1:
         return n
     else:
-        return n * get_factorial(n-1)
+        return n * get_factorial(n - 1)
+
 
 n = 145
 digits = list(map(int, str(n)))
