@@ -1,17 +1,14 @@
-# Problem: https://leetcode.com/problems/two-sum/
-
 from typing import List
 
 
-class TwoSums:
-    def two_sums(self, nums: List[int], target: int):
-        ref: dict = {}
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hash_map = {}
         for idx, num in enumerate(nums):
-            diff = target - num
-            if diff in ref:
-                return [ref[diff], idx]
-            ref[num] = idx
+            if num in hash_map.keys():
+                return hash_map.get(num), idx
+            hash_map[target - num] = idx
 
 
 if __name__ == "__main__":
-    print(TwoSums().two_sums([1, 2, 3], 5))
+    print(Solution().twoSum(nums=[3, 3], target=6))
